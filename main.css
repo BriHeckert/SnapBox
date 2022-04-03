@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+/* darkmode*/
+.custombody{
+  background-color: #4A4E4E;
+}
+
+/* used to override Bootstraps header classes */
+.customh1{
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 3.0em;
+  color: white;
+}
+
+/* makes the font color in links white instead of blue */
+.adark{
+  color: white;
+}
+
+/* vertical nav bar */
+.customnav {
+    display: flex;
+    padding-left: 0;
+    min-height: 100vh;
+    margin-bottom: 0;
+}
+
+/* pretty outside boxes */
+.Activity-Entry{
+   word-wrap: break-word;
+   border: 10px solid black;
+   border-radius: 10px;
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+   margin: 10px;
+}
+
+/* pretty outside boxes for activities in groups */
+.Activity-Entry-Inside{
+   word-wrap: break-word;
+   border: 2px solid black;
+   border-radius: 10px;
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+   margin-bottom: 10px;
+}
+
+.Dropdown{
+   text-align: right;
+}
+
+/*Carousel*/
+.carousel-inner{
+    max-height: 250px;
+}
+.carousel-item1{
+    background-image: url("https://images.immediate.co.uk/production/volatile/sites/4/2021/08/mountains-7ddde89.jpg?quality=90&resize=768,574");
+    height: 205px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.carousel-item2{
+    background-image: url("https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW4lMjBsYW5kc2NhcGV8ZW58MHx8MHx8&w=1000&q=80");
+    height: 205px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+.li{
+    text-align: center;
+}
+
+/*Calendar Picture*/
+#Calendar{
+    background-image: url(https://www.printabulls.com/wp-content/uploads/2022/01/Printable-March-2022-Calendar-Style-1-1024x791.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*Members*/
+.members{
+    border-right: 4px solid #000000;
+    border-left: 4px solid black;
+}

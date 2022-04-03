@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+Sources:
+-->
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="Brianna Heckert, Kane Aldrich">
+   <meta name="description" content="login page">
+   <meta name="keywords" content="ScrapBox, ScrapBox login">
+   <link rel="stylesheet" href="styles/main.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+   <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
+   <title>Trending</title>
+ </head>
+ <body class = "container-fluid">
+   <!--SideBar-->
+   <div class="row">
+     <div class="col-2 float-left">
+       <div class="flex-column bg-dark row justify-content-center customnav">
+         <a href="./trending.html" class="link-dark text-decoration-none text-center" title="" data-bs-toggle="tooltip" data-bs-placement="center" data-bs-original-title="Icon-only"style="color:white">
+         Home
+         </a>
+         <ul class="nav nav-flush flex-column mb-auto text-center">
+           <li class="nav-item">
+             <a href="grouptemplate.html" class="nav-link active border-bottom">
+               G1
+             </a>
+           </li>
+           <li>
+             <a href="#" class="nav-link border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+               G2
+             </a>
+           </li>
+           <li>
+             <a href="#" class="nav-link border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+               G3
+             </a>
+           </li>
+         </ul>
+         <div class="dropdown border-top">
+           <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
+           </a>
+         </div>
+       </div>
+     </div>
+     <!--End SideBar-->
+
+     <!-- Trending and Recommended -->
+     <div class="col-10">
+       <div class="row justify-content-center">
+         <div class="col-5 text-end">
+           <button type="button" class="btn btn-dark TR-Toggle" id="TR-LEFT">Trending</button>
+         </div>
+         <div class="col-5 text-start">
+           <button type="button" class="btn btn-dark TR-Toggle" id="TR-RIGHT">Recommended</button>
+         </div>
+       </div>
+
+       <!-- Activities -->
+       <div class="row justify-content-center p-3">
+         <ul class="col">
+             <li>
+               <div class="row Activity-Entry">
+                 <div class="col-4">
+                   <img class="img-fluid" src="Humpback.png" alt="view from humpback mountain">
+                 </div>
+                 <div class="col-8 Activity-Info" style="color:white;">
+                   <div class="row">
+                     <h3>Humpback Rock Hike</h3>
+                       <p>Milepost 5.8 Blue Ridge Parkway, Lyndhurst, VA 22952</p>
+                       <p>Hiking, Outdoors, Nature, Views</p>
+                     <a href="https://www.nps.gov/blri/planyourvisit/humpback-rocks-trails.htm">Learn More</a>
+                   </div>
+                   <div class="row">
+                     <div class="Dropdown p-2">
+                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                           Add To Group
+                       </button>
+                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                         <li><a class="dropdown-item" href="#">Add To Group 1</a></li>
+                         <li><a class="dropdown-item" href="#">Add To Group 2</a></li>
+                         <li><a class="dropdown-item" href="#">Add To Group 3</a></li>
+                       </ul>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </li>
+             <li>
+               <div class="row Activity-Entry">
+                 <div class="col-4">
+                   <img class="img-fluid" src="asados.jpeg" alt="asados Restaurant">
+                 </div>
+                 <div class="col-8 Activity-Info" style="color:white;">
+                   <div class="row">
+                     <h3>Asado's</h3>
+                       <p>1327 W Main St, Charlottesville, VA 22903</p>
+                       <p>Bar, Restaurant, Food, Drinking, Nightlife</p>
+                     <a href="https://asadocville.com/">Learn More</a>
+                   </div>
+                   <div class="row">
+                     <div class="Dropdown p-2">
+                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                           Add To Group
+                       </button>
+                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                         <li><a class="dropdown-item" href="#">Add To Group 1</a></li>
+                         <li><a class="dropdown-item" href="#">Add To Group 2</a></li>
+                         <li><a class="dropdown-item" href="#">Add To Group 3</a></li>
+                       </ul>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </li>
+           </ul>
+       </div>
+     </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+ </body>
