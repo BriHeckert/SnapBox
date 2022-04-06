@@ -76,6 +76,8 @@ table {
     padding-left: 0;
     min-height: 100vh;
     margin-bottom: 0;
+    position: fixed;
+    padding-right: 0px;
 }
 
 /* pretty outside boxes */
