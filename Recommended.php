@@ -74,7 +74,7 @@
 
        <!-- Activities -->
        <?php
-       $data = $this->db->query("select * from Trending_Activities;");
+       $data = $this->db->query("select * from Recommended_Activities;");
        echo "<div class='row justify-content-center p-3'>
               <ul class='col'>";
        foreach($data as $activity){
@@ -96,7 +96,7 @@
                              Add To Group
                          </button>
                          <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
-                          <form action='?command=NewGroupActivityT' method='post'>
+                          <form action='?command=NewGroupActivityR' method='post'>
                             <input name = 'UserName' type='hidden' id='UserName' name='UserName' value='" . $_SESSION["Name"] . "'/>
                             <input name = 'ActivityName' type='hidden' id='ActivityName' value='";echo $activity["Name"];echo"'/>
                             <input name = 'ActivityAddress' type='hidden' id='ActivityAddress' value='";echo $activity["Address"];echo"'/>

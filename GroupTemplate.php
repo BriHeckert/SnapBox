@@ -87,6 +87,7 @@ foreach($groupsToCreate as $groupName){
               </div>
              <div class='col-sm-4 col-12 members'>
                <h2>Group Members:</h2>";
+               //This is for creating member list
                $MemData = $this->db->query('select * from all_table_info where Name = ?;', 's', $groupName);
                $MemData = $MemData[0];
                $MemberArray = explode(", ", $MemData["Members"]);
@@ -96,11 +97,16 @@ foreach($groupsToCreate as $groupName){
                }
                echo '</ul>';
                echo "
-                <a href='?command=AddMember'><button style='margin-top:10px'class='btn btn-outline-light btn-lg px-5'>Add Member</button></a>
-                <a href='?command=RemoveMember'><button style='margin-top:10px'class='btn btn-outline-light btn-lg px-5'>Remove Member</button></a>
+               <form action='?command=AddMember' method='post'>
+                <button class='btn btn-outline-light btn-lg px-5' id='groupAdded' name='groupAdded' type='submit' style='margin-bottom:10px' value='";echo$groupName;echo"'>Add Member</button>
+               </form>
+               <form action='?command=RemoveMember' method='post'>
+                <button class='btn btn-outline-light btn-lg px-5' id='groupAdded' name='groupAdded' type='submit' style='margin-bottom:10px' value='";echo$groupName;echo"'>Remove Member</button>
+               </form>
               </div>
               <div class='col-sm-4 col-12'>
                  <h2>To-Do-List</h2>";
+                 //This is for the todo data
                  $ToDoData = $this->db->query('select * from all_table_info where Name=?;', 's', $groupName);
                  $ToDoData = $ToDoData[0]["ToDo"];
                  if(strlen($ToDoData) === 0){
@@ -108,7 +114,7 @@ foreach($groupsToCreate as $groupName){
                  }else{
                     $ToDoArray = explode(", ", $ToDoData);
                     echo "<ol style='color:white'>";
-                      foreach($ToDoData as $ToDo){
+                      foreach($ToDoArray as $ToDo){
                         echo '<li>';echo $ToDo;echo'</li>';
                       }
                     echo '</ol>';
@@ -125,7 +131,6 @@ foreach($groupsToCreate as $groupName){
              }
              else{
               $activityData = explode("; ", $data["Activities"]);
-              print_r($activityData);
               foreach($activityData as $activity){
                 $thisActivityData = explode(", ", $activity);
                  echo "<div class='row justify-content-center p-3>
@@ -147,9 +152,13 @@ foreach($groupsToCreate as $groupName){
                }
              }
         echo "
-        <div style='text-align:center'>
-          <a href='?command=AddActivity'><button style='margin-top:10px'class='btn btn-outline-light btn-lg px-5'>Add Activity</button></a>
-          <a href='?command=RemoveActivity'><button style='margin-top:10px'class='btn btn-outline-light btn-lg px-5'>Remove Activity</button></a>
+        <form action='?command=RemoveActivity' method='post'>
+        <div style='text-align:center'>";
+        echo " <button class='btn btn-outline-light btn-lg px-5' id='groupAdded' name='groupAdded' type='submit' style='margin-bottom:10px' value='";echo$groupName;echo"'>Remove Activity</button>";
+        echo "</form><form action='?command=AddActivity' method='post'>";
+        echo " <button class='btn btn-outline-light btn-lg px-5' id='groupAdded' name='groupAdded' type='submit' value='";echo$groupName;echo"'>Add Activity</button>";
+        echo"</form>
+
         </div>
      <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ' crossorigin='anonymous'></script>
      <script src='https://cdn.jsdelivr.net/npm/less@4'></script>
